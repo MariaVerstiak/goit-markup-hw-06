@@ -40,22 +40,64 @@
 
     <div class="mobile-menu" data-menu>
         <div class="container mobile-menu-container">
-            <button class="mobile-menu-close" data-menu-close>Close</button>
-            <nav>Navigation</nav>
-            <address>Address</address>
-            <div class="mobile-menu-nav">SocLink</div>
+            <button class="mobile-close-btn" type="button" data-menu-close>
+                <svg class="mobile-btn-close-icon" width="8"  height="8">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <ul class="mobile-menu-nav">
+                    <li><a class="menu-link-nav current" href="./index.html">Studio</a></li>
+                    <li><a class="menu-link-nav" href="">Portfolio</a></li>
+                    <li><a class="menu-link-nav" href="">Contacts</a></li>
+            </ul>
+             <address class="menu-contacts-list">
+                <ul class="menu-contacts">
+                <li> <a class="menu-link contacts-link-menu" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                <li> <a class="menu-link contacts-link-menu" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                </ul>
+             </address>
+             <ul class="menu-list-soc">
+                    <li class="menu-soc-item">
+                        <a class="menu-soc-link" href="" target="_blank">
+                    <svg class="menu-soc-icon" width="16" height="16">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                    </a>
+                    </li>
+                    <li class="menu-soc-item">
+                        <a class="menu-soc-link" href="" target="_blank">
+                    <svg class="menu-soc-icon" width="16" height="16">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                    </a>
+                    </li>
+                    <li class="menu-soc-item">
+                        <a class="menu-soc-link" href="" target="_blank">
+                    <svg class="menu-soc-icon" width="16" height="16">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                    </a>
+                    </li>
+                    <li class="menu-soc-item">
+                        <a class="menu-soc-link" href="" target="_blank">
+                    <svg class="menu-soc-icon" width="16" height="16">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                        </a>
+                    </li>
+                </ul>
         </div>
     </div>
    </header>
 
    <main>
-    <section class="main-page hidden"> 
+    <section class="main-page"> 
         <div class="container main-page-container">
             <h1 class="main-page-title">Effective Solutions or Your Business</h1>
             <button class=order-button type="button" data-modal-open>Order Service</button>
         </div>
     </section>   
-    <section class="studio hidden">
+    <section class="studio">
         <div class="container studio-container">
          <h2 class="studio-title visually-hidden">Studio</h2>
          <ul class="studio-list">
@@ -98,7 +140,7 @@
          </ul>
         </div>
     </section>
-    <section class="our-team hidden">
+    <section class="our-team">
         <div class="container our-team-container">
         <h2 class="team-title">Our Team</h2>
         <ul class="team-mem">
@@ -253,7 +295,7 @@
         </ul>
         </div>
     </section>
-    <section class="portfolio hidden">
+    <section class="portfolio">
         <div class="container">
         <h2 class="portfolio-title">Our Portfolio</h2>
             <ul class="portfolio-list">
@@ -322,7 +364,7 @@
     </section>
    </main>
 
-   <footer class="footer-page hidden">
+   <footer class="footer-page">
     <div class="container footer-container">
         <div class="footer-logo-description">
         <a href="./index.html" class="web-footer footer-logo">Web<span class="studio-footer">Studio</span></a>
