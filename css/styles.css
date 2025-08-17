@@ -130,111 +130,112 @@ button{
 }
 
 @media screen and (min-width: 768px){
-    .burger-btn{
-        display: none;
-    }
-
-    .nav-menu{
-        display: flex;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .navigation-list{
-        display: flex;
-        align-items: center;
-    }
-
-    .header-logo{
-        padding: 24px 0;
-        margin-right: 120px;
-    }
-
-    .link-nav{
-        font-weight: 500;
-        color: #2e2f42;
-        text-decoration: none;
-        display: block;
-        padding: 24px 0;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.burger-btn{
+    display: none;
 }
 
-    .link-nav.current{
-        position: relative;
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navigation-list{
+    display: flex;
+    align-items: center;
+}
+
+.header-logo{
+    padding: 24px 0;
+    margin-right: 120px;
+}
+
+.link-nav{
+    font-weight: 500;
+    color: #2e2f42;
+    text-decoration: none;
+    display: block;
+    padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-nav.current{
+    position: relative;
+    color: #404bbf;
+}
+
+.link-nav.current::after{
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+}
+
+li a:hover, li a:focus{
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #404bbf;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.contacts-list{
+    font-style: normal;
+    display: block;
+}
+
+.contacts-link{
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
+
+.contacts-link .link:hover, .contacts-link .link:focus{
         color: #404bbf;
-    }
+}
 
-    .link-nav.current::after{
-        left: 0;
-        bottom: -1px;
-        border-radius: 2px;
-        width: 100%;
-        height: 4px;
-        background-color: #404bbf;
-    }
-
-    li a:hover, li a:focus{
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #404bbf;
-    }
-
-    .contacts{
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .contacts-list{
-        font-style: normal;
-        display: block;
-    }
-
-    .contacts-link{
-        display: block;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
-        color: #434455;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    } 
-
-    .contacts-link .link:hover, .contacts-link .link:focus{
-        color: #404bbf;
-    }
-
-    .link-nav.current::after{
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -1px;
-        border-radius: 2px;
-        width: 100%;
-        height: 4px;
-        background-color: #404bbf;
-    }
+.link-nav.current::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+}
 
 }
 
 @media screen and (min-width: 1158px){
-    .header-logo{
-        margin-right: 76px;
-    }
+.header-logo{
+    margin-right: 76px;
+}
 
-    .contacts{
-        flex-direction: row;
-        align-items: center;
-        gap: 40px;
-    }
+.contacts{
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
 
-    .contacts-li{
-        padding: 24px 0;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-    }
+.contacts-li{
+    padding: 24px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
 }
 
 /* mobile-menu */
@@ -369,7 +370,7 @@ button{
     padding-bottom: 172px;
     background-image: linear-gradient(
 	to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-    url("../images/people-office1x.jpg");
+    url("../images/people-office-mobile.jpg");
     margin: 0 auto;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -603,7 +604,6 @@ button{
     background-color: #404bbf;
 }
 
-
 @media screen and (min-width: 768px){
 
 .team-title{
@@ -611,13 +611,12 @@ button{
 }
    
 .team-mem{
-    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 24px;
-}
-
-.team-list{
-    width: calc((100% - 24px) / 2)
+    gap: 64px;
+    column-gap: 24px;
 }
 }
 
@@ -754,7 +753,7 @@ button{
 
 .footer-container{
     display: flex;
-    flex-wrap: column; 
+    flex-direction: column; 
     flex-wrap: wrap;
     gap: 72px;
 }
@@ -784,6 +783,11 @@ button{
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
+    margin-top: 16px;
+}
+
+.footer-social-media{
+    text-align: center;
 }
 
 .footer-soc-text{
@@ -796,16 +800,10 @@ button{
     text-align: center;
 }
 
-.footer-container{
-    padding-bottom: 72px;
-}
-
-.footer-soc-link:hover, .footer-soc-link:focus{
-    background-color: #31d0aa;
-}
-
 .footer-soc-list{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 16px;
     padding: 0;
     margin: 0;
@@ -813,8 +811,9 @@ button{
 }
 
 .footer-soc-item{
-    width: 40px;
-    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-soc-link{
@@ -822,16 +821,26 @@ button{
     height: 100%;
     background-color: #4d5ae5;
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
+.footer-soc-link:hover, .footer-soc-link:focus{
+    background-color: #31d0aa;
+}
+
 .footer-soc-icon{
     width: 24px;
     height: 24px;
     fill: #f4f4fd;
+}
+
+.subscribe-form{
+    text-align: center;
 }
 
 .subscribe-title{
@@ -867,6 +876,7 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     padding: 0;
     margin: 0;
@@ -891,7 +901,7 @@ button{
     text-align: center;
     color: #fff;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-btn:hover, .subscribe-btn:focus{
@@ -903,9 +913,69 @@ button{
     fill: #fff;
 }
 
+@media screen and (min-width: 768px){
 
-@media screen and (min-width: 768px){}
-@media screen and (min-width: 1158px){}
+.footer-container{
+    flex-direction: row;
+    column-gap: 24px;
+    align-items: baseline;
+}
+
+.footer-description{
+    max-width: 264px;
+}
+
+.footer-logo{
+    text-align: start;
+}
+
+.footer-soc-text{
+    text-align: start;
+}
+
+.subscribe-title{
+    text-align: start;
+}
+
+.subscribe-form-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.subscribe-email{
+    width: 264px;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+.footer-container {
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+}
+
+@media screen and (min-width: 1158px){
+.footer-container{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.footer-logo-description{
+    margin-right: 120px;
+}
+
+.subscribe-form{
+    margin-left: auto;
+}
+
+.footer-soc-link, .subscribe-email, .subscribe-btn{
+    
+}
+}
 
 
 /*modal*/
@@ -933,13 +1003,13 @@ button{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 408px;
-    min-height: 584px;
+    width: 288px;
+    min-height: 623px;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
     transform: translate(-50%, -50%);
-    padding: 72px 24px 24px 24px; 
+    padding: 72px 16px 24px 16px; 
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
@@ -1138,5 +1208,10 @@ button{
     background-color: #404bbf;
 }
 
-@media screen and (min-width: 768px){}
-@media screen and (min-width: 1158px){}
+@media screen and (min-width: 768px){
+.modal-box{
+    width: 408px;
+    min-height: 584px;
+    padding-left: 24px; 
+    padding-right: 24px;
+}
