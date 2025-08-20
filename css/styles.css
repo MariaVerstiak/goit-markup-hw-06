@@ -992,12 +992,7 @@ li a:hover, li a:focus{
 .subscribe-form{
     margin-left: auto;
 }
-
-.footer-soc-link, .subscribe-email, .subscribe-btn{
-    
 }
-}
-
 
 /*modal*/
 
@@ -1235,4 +1230,5 @@ li a:hover, li a:focus{
     min-height: 584px;
     padding-left: 24px; 
     padding-right: 24px;
+}
 }
